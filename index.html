@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>우리 결혼합니다 ♡ 모바일 청첩장</title>
+    <!-- 카카오톡 공유 및 링크 미리보기 설정 -->
+    <meta property="og:title" content="김철수 ♥ 이영희의 결혼식에 초대합니다">
+    <meta property="og:description" content="2026년 10월 25일 낮 12시 30분">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1519741497674-611481863552?w=800">
+    
+    <!-- 스타일시트 연결 -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="mobile-container">
+        
+        <!-- 1. 메인 커버 섹션 -->
+        <section class="hero-section">
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=800" alt="웨딩 메인 사진">
+            </div>
+            <div class="hero-text">
+                <h1>김철수 · 이영희</h1>
+                <p class="wedding-date">2026년 10월 25일, 일요일 낮 12시 30분</p>
+                <p class="wedding-place">OO웨딩홀 3층 그랜드홀</p>
+            </div>
+        </section>
+
+        <!-- 2. 디데이 카운터 섹션 -->
+        <section class="dday-section">
+            <h2>WEDDING DAY</h2>
+            <div id="dday-counter">결혼일까지 남은 시간 계산 중...</div>
+        </section>
+
+        <!-- 3. 인사말 섹션 -->
+        <section class="greeting-section">
+            <h2>소중한 분들을 초대합니다</h2>
+            <p>
+                서로가 만나기 전에는 몰랐습니다.<br>
+                함께 걸어가는 이 길이 얼마나 따뜻한지.<br><br>
+                이제 저희 두 사람이 평생을 함께 하려 합니다.<br>
+                걸음 하셔서 축복해 주시면 더없는 기쁨이 되겠습니다.
+            </p>
+        </section>
+
+        <!-- 4. 계좌번호 안내 및 복사 섹션 -->
+        <section class="account-section">
+            <h2>마음 전하실 곳</h2>
+            <div class="account-box">
+                <p><strong>신랑 김철수</strong> | 우리은행 1002-123-456789</p>
+                <button onclick="copyAccount('1002123456789')">계좌번호 복사</button>
+            </div>
+            <div class="account-box">
+                <p><strong>신부 이영희</strong> | 국민은행 123456-04-123456</p>
+                <button onclick="copyAccount('12345604123456')">계좌번호 복사</button>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer>
+            <p>© 2026 Cheolsu & Younghee</p>
+        </footer>
+
+    </div>
+
+    <!-- 자바스크립트 연결 -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
