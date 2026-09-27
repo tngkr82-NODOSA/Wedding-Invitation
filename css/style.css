@@ -1,0 +1,33 @@
+// D-Day 카운터 기능
+function updateDday() {
+    const weddingDate = new Date('2026-10-25T12:30:00');
+    const now = new Date();
+    const diff = weddingDate - now;
+
+    const counterElement = document.getElementById('dday-counter');
+
+    if (diff < 0) {
+        counterElement.innerText = "예식일이 행복하게 지났습니다. 감사합니다!";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / 1000 / 60) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    counterElement.innerText = `결혼일까지 D-${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남았습니다`;
+}
+
+// 1초마다 타이머 업데이트
+setInterval(updateDday, 1000);
+updateDday();
+
+// 계좌번호 복사 기능
+function copyAccount(accountNumber) {
+    navigator.clipboard.writeText(accountNumber).then(() => {
+        alert('계좌번호가 복사되었습니다!');
+    }).catch(err => {
+        console.error('복사 실패:', err);
+    });
+}
